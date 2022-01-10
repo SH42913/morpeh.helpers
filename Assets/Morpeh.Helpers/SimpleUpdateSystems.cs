@@ -20,7 +20,7 @@
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected abstract void Process(Entity entity, ref T component, float deltaTime);
+        protected abstract void Process(Entity entity, ref T component, in float deltaTime);
     }
 
     public abstract class SimpleUpdateSystem<T1, T2> : UpdateSystem where T1 : struct, IComponent
@@ -44,6 +44,6 @@
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected abstract void Process(Entity entity, ref T1 first, ref T2 second, float deltaTime);
+        protected abstract void Process(Entity entity, ref T1 first, ref T2 second, in float deltaTime);
     }
 }
