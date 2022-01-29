@@ -13,13 +13,9 @@
         }
 
         public override void OnUpdate(float deltaTime) {
-            if (filter.IsEmpty()) {
-                return;
-            }
-
-            Filter.ComponentsBag<T> components = filter.Select<T>();
-            for (int i = 0, length = filter.Length; i < length; i++) {
-                Process(filter.GetEntity(i), ref components.GetComponent(i), deltaTime);
+            ComponentsCache<T> cache = World.GetCache<T>();
+            foreach (Entity ent in filter) {
+                Process(ent, ref cache.GetComponent(ent), deltaTime);
             }
         }
 
@@ -40,10 +36,10 @@
         }
 
         public override void OnUpdate(float deltaTime) {
+            ComponentsCache<T1> cache1 = World.GetCache<T1>();
+            ComponentsCache<T2> cache2 = World.GetCache<T2>();
             foreach (Entity ent in filter) {
-                ref T1 first = ref ent.GetComponent<T1>();
-                ref T2 second = ref ent.GetComponent<T2>();
-                Process(ent, ref first, ref second, deltaTime);
+                Process(ent, ref cache1.GetComponent(ent), ref cache2.GetComponent(ent), deltaTime);
             }
         }
 

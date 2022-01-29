@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.scellecs.morpeh": {
+      "version": "https://github.com/scellecs/morpeh.git#2022-major",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "81fcdbca9c9152765aa58101540291fb8670fe3d"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -51,13 +58,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.xcrew.morpeh": {
-      "version": "https://github.com/scellecs/morpeh.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "a47bacc33950f51fab290cb0efcaa33ff14074e5"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
