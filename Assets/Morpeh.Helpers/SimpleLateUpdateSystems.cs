@@ -13,6 +13,10 @@
         }
 
         public override void OnUpdate(float deltaTime) {
+            if (filter.IsEmpty()) {
+                return;
+            }
+
             ComponentsCache<T> cache = World.GetCache<T>();
             foreach (Entity ent in filter) {
                 Process(ent, ref cache.GetComponent(ent), deltaTime);
@@ -36,6 +40,10 @@
         }
 
         public override void OnUpdate(float deltaTime) {
+            if (filter.IsEmpty()) {
+                return;
+            }
+
             ComponentsCache<T1> cache1 = World.GetCache<T1>();
             ComponentsCache<T2> cache2 = World.GetCache<T2>();
             foreach (Entity ent in filter) {
