@@ -1,7 +1,8 @@
 ﻿namespace Morpeh.Helpers {
     using System.Runtime.CompilerServices;
 
-    public abstract class SimpleUpdateSystem<T> : UpdateSystem where T : struct, IComponent {
+    public abstract class SimpleUpdateSystem<T> : UpdateSystem
+            where T : struct, IComponent {
         protected Filter filter;
         protected bool inAwake;
 
@@ -27,8 +28,9 @@
         protected abstract void Process(Entity entity, ref T component, in float deltaTime);
     }
 
-    public abstract class SimpleUpdateSystem<T1, T2> : UpdateSystem where T1 : struct, IComponent
-                                                                    where T2 : struct, IComponent {
+    public abstract class SimpleUpdateSystem<T1, T2> : UpdateSystem
+            where T1 : struct, IComponent
+            where T2 : struct, IComponent {
         protected Filter filter;
         protected bool inAwake;
 

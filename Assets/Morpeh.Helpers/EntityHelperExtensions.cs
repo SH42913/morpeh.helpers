@@ -8,7 +8,8 @@
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ref T GetOrCreate<T>(this Entity entity) where T : struct, IComponent {
+        public static ref T GetOrCreate<T>(this Entity entity)
+                where T : struct, IComponent {
             if (entity.Has<T>()) {
                 return ref entity.GetComponent<T>();
             }
