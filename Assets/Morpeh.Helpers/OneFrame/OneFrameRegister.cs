@@ -18,7 +18,8 @@
             CleanOneFrameEvents();
         }
 
-        public void RegisterOneFrame<T>(World world) where T : struct, IComponent {
+        public void RegisterOneFrame<T>(World world)
+                where T : struct, IComponent {
             for (var i = 0; i < registeredFilters; i++) {
                 if (oneFrameFilters[i].GetInnerType() == typeof(T)) {
                     return;
@@ -38,7 +39,8 @@
             }
         }
 
-        private sealed class OneFrameFilter<T> : ICanClean where T : struct, IComponent {
+        private sealed class OneFrameFilter<T> : ICanClean
+                where T : struct, IComponent {
             private readonly Filter filter;
 
             public OneFrameFilter(World world) {
