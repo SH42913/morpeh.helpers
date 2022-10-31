@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.scellecs.morpeh": {
-      "version": "https://github.com/scellecs/morpeh.git#2022-major",
+      "version": "https://github.com/scellecs/morpeh.git#master",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "81fcdbca9c9152765aa58101540291fb8670fe3d"
+      "hash": "bf3c297e251fd81f8fa1a4d3c571463756abb2cb"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
