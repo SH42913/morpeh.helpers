@@ -16,10 +16,5 @@
                 world.RemoveEntity(ent);
             }
         }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static bool IsEmpty(this Filter filter) {
-            return filter.Length < 1;
-        }
     }
 }
