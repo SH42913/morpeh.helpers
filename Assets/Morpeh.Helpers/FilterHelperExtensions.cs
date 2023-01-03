@@ -1,4 +1,4 @@
-﻿namespace Morpeh.Helpers {
+﻿namespace Scellecs.Morpeh.Helpers {
     using System.Runtime.CompilerServices;
 
     public static class FilterHelperExtensions {

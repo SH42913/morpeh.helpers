@@ -1,4 +1,4 @@
-﻿namespace Morpeh.Helpers.OneFrame {
+﻿namespace Scellecs.Morpeh.Helpers.OneFrame {
     using System;
     using UnityEngine;
 
@@ -18,6 +18,7 @@
             CleanOneFrameEvents();
         }
 
+        // ReSharper disable once UnusedMember.Global
         public void RegisterOneFrame<T>(World world)
                 where T : struct, IComponent {
             for (var i = 0; i < registeredFilters; i++) {

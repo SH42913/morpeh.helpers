@@ -1,13 +1,16 @@
-﻿namespace Morpeh.Helpers {
+﻿namespace Scellecs.Morpeh.Helpers {
     using System.Runtime.CompilerServices;
+    using Systems;
 
     public abstract class SimpleLateUpdateSystem : LateUpdateSystem {
+        // ReSharper disable once NotAccessedField.Global
+        // ReSharper disable once MemberCanBePrivate.Global
         protected bool inAwake;
         private Filter filter;
 
         public override void OnAwake() {
             inAwake = true;
-            InitCache();
+            InitStashes();
             filter = BuildFilter();
             OnUpdate(0f);
             inAwake = false;
@@ -24,7 +27,7 @@
         }
 
         protected abstract Filter BuildFilter();
-        protected abstract void InitCache();
+        protected abstract void InitStashes();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected abstract void Process(Entity ent, in float deltaTime);
@@ -32,10 +35,10 @@
 
     public abstract class SimpleLateUpdateSystem<T> : SimpleLateUpdateSystem
             where T : struct, IComponent {
-        private ComponentsCache<T> cache;
+        private Stash<T> stash;
 
-        protected override void InitCache() {
-            cache = World.GetCache<T>();
+        protected override void InitStashes() {
+            stash = World.GetStash<T>();
         }
 
         protected override Filter BuildFilter() {
@@ -44,7 +47,7 @@
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Process(Entity ent, in float deltaTime) {
-            Process(ent, ref cache.GetComponent(ent), deltaTime);
+            Process(ent, ref stash.Get(ent), deltaTime);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -54,12 +57,12 @@
     public abstract class SimpleLateUpdateSystem<T1, T2> : SimpleLateUpdateSystem
             where T1 : struct, IComponent
             where T2 : struct, IComponent {
-        private ComponentsCache<T1> cache1;
-        private ComponentsCache<T2> cache2;
+        private Stash<T1> stash1;
+        private Stash<T2> stash2;
 
-        protected override void InitCache() {
-            cache1 = World.GetCache<T1>();
-            cache2 = World.GetCache<T2>();
+        protected override void InitStashes() {
+            stash1 = World.GetStash<T1>();
+            stash2 = World.GetStash<T2>();
         }
 
         protected override Filter BuildFilter() {
@@ -68,7 +71,7 @@
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Process(Entity ent, in float deltaTime) {
-            Process(ent, ref cache1.GetComponent(ent), ref cache2.GetComponent(ent), deltaTime);
+            Process(ent, ref stash1.Get(ent), ref stash2.Get(ent), deltaTime);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -79,14 +82,14 @@
             where T1 : struct, IComponent
             where T2 : struct, IComponent
             where T3 : struct, IComponent {
-        private ComponentsCache<T1> cache1;
-        private ComponentsCache<T2> cache2;
-        private ComponentsCache<T3> cache3;
+        private Stash<T1> stash1;
+        private Stash<T2> stash2;
+        private Stash<T3> stash3;
 
-        protected override void InitCache() {
-            cache1 = World.GetCache<T1>();
-            cache2 = World.GetCache<T2>();
-            cache3 = World.GetCache<T3>();
+        protected override void InitStashes() {
+            stash1 = World.GetStash<T1>();
+            stash2 = World.GetStash<T2>();
+            stash3 = World.GetStash<T3>();
         }
 
         protected override Filter BuildFilter() {
@@ -96,9 +99,9 @@
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Process(Entity ent, in float deltaTime) {
             Process(ent,
-                    ref cache1.GetComponent(ent),
-                    ref cache2.GetComponent(ent),
-                    ref cache3.GetComponent(ent),
+                    ref stash1.Get(ent),
+                    ref stash2.Get(ent),
+                    ref stash3.Get(ent),
                     deltaTime);
         }
 

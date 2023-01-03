@@ -1,8 +1,10 @@
-﻿namespace Morpeh.Helpers.OneFrame {
+﻿namespace Scellecs.Morpeh.Helpers.OneFrame {
+    using Systems;
     using UnityEngine;
 
+    // ReSharper disable once ClassCanBeSealed.Global
     [CreateAssetMenu(menuName = "ECS/Helpers/" + nameof(OneFrameCleanSystem))]
-    public class OneFrameCleanSystem : LateUpdateSystem {
+    public class OneFrameCleanSystem : CleanupSystem {
         public OneFrameRegister register;
 
         public override void OnAwake() { }
@@ -11,6 +13,7 @@
             register.CleanOneFrameEvents();
         }
 
+        // ReSharper disable once UnusedMember.Global
         public static OneFrameCleanSystem Create() {
             return CreateInstance<OneFrameCleanSystem>();
         }
