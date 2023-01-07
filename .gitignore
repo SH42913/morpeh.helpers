@@ -1,11 +1,12 @@
+# Unity Editor local-only folders
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
+/[Bb]uilds?/
 /[Ll]ogs/
-/[Mm]emoryCaptures/
 /[Aa]ssets/AssetStoreTools*
+/MemoryCaptures/
+/UserSettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
