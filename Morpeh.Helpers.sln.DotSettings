@@ -173,6 +173,7 @@
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=CLASS/Order/@EntryValue">1</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=ECS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=ECS/Expression/@EntryValue">getProjectName()</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=ECS/Order/@EntryValue">4</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
@@ -186,18 +187,19 @@
 	
 	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=SYSTEMTYPE/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=SYSTEMTYPE/Expression/@EntryValue">completeType("")</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=SYSTEMTYPE/Expression/@EntryValue">complete()</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Field/=SYSTEMTYPE/Order/@EntryValue">3</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Scope/=3AFF06A83793DB40A4815548166EC77E/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Scope/=3AFF06A83793DB40A4815548166EC77E/Type/@EntryValue">InUnityCSharpProject</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Text/@EntryValue">$HEADER$namespace $NAMESPACE$ {
+    using Scellecs.Morpeh;
     [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
     [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
     [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
     [UnityEngine.CreateAssetMenu(menuName = "$ECS$/" + nameof($CLASS$))]
-    public sealed class $CLASS$ : Morpeh.$SYSTEMTYPE$
+    public sealed class $CLASS$ : Scellecs.Morpeh.Systems.$SYSTEMTYPE$
     {
         public override void OnAwake() {
             $END$
@@ -240,8 +242,8 @@
 	
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Shortcut/@EntryValue">provider</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Text/@EntryValue">[AddComponentMenu("$ECS$/" + nameof($COMPONENT$))]
-public sealed class $COMPONENT$Provider : Morpeh.MonoProvider&lt;$COMPONENT$&gt; { }</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Text/@EntryValue">[UnityEngine.AddComponentMenu("$ECS$/" + nameof($COMPONENT$))]
+public sealed class $COMPONENT$Provider : Scellecs.Morpeh.Providers.MonoProvider&lt;$COMPONENT$&gt; { }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
@@ -266,7 +268,7 @@ public sealed class $COMPONENT$Provider : Morpeh.MonoProvider&lt;$COMPONENT$&gt;
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
 {
     [System.Serializable]
-    public struct $CLASS$ : Morpeh.IComponent {$END$}
+    public struct $CLASS$ : Scellecs.Morpeh.IComponent {$END$}
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4795E57DDEC1C4F97BBC8C7173EBBCA/@KeyIndexDefined">False</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Arcanery/@EntryIndexedValue">True</s:Boolean>
