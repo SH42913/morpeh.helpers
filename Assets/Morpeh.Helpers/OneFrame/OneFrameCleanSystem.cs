@@ -13,6 +13,10 @@
             register.CleanOneFrameEvents();
         }
 
+        public override void Dispose() {
+            register.Dispose();
+        }
+
         // ReSharper disable once UnusedMember.Global
         public static OneFrameCleanSystem Create() {
             return CreateInstance<OneFrameCleanSystem>();

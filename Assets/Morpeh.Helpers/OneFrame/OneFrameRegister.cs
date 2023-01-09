@@ -4,18 +4,13 @@
 
     [CreateAssetMenu(menuName = "ECS/Helpers/" + nameof(OneFrameRegister))]
     public sealed class OneFrameRegister : ScriptableObject {
-        public int startCapacity;
+        public int startCapacity = 1;
 
         private ICanClean[] oneFrameFilters;
         private int registeredFilters;
 
         private void OnEnable() {
-            oneFrameFilters = new ICanClean[startCapacity];
-            registeredFilters = 0;
-        }
-
-        private void OnDisable() {
-            CleanOneFrameEvents();
+            CleanFilters();
         }
 
         // ReSharper disable once UnusedMember.Global
@@ -38,6 +33,16 @@
             for (var i = 0; i < registeredFilters; i++) {
                 oneFrameFilters[i].Clean();
             }
+        }
+
+        public void Dispose() {
+            CleanOneFrameEvents();
+            CleanFilters();
+        }
+
+        private void CleanFilters() {
+            oneFrameFilters = new ICanClean[startCapacity];
+            registeredFilters = 0;
         }
 
         private sealed class OneFrameFilter<T> : ICanClean
