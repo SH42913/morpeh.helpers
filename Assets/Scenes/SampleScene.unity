@@ -155,7 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   initializers: []
-  updateSystems: []
+  updateSystems:
+  - enabled: 0
+    system: {fileID: 11400000, guid: 583c24e312ae93745b9a768348b7b4df, type: 2}
   fixedUpdateSystems: []
   lateUpdateSystems: []
   cleanupSystems:
