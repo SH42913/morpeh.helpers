@@ -43,17 +43,16 @@ Example:
 ### One-Frame Components
 aka Auto-clean systems
 
-That util will let you register a type of component to clean up all existing components during LateUpdate(based on `CleanupSystem` in Morpeh). 
-So you'll be able to write `oneFrameRegister.RegisterOneFrame<T>()` once and fire components without the need to clean up after you.
+That util will let you register a type of component to clean up all existing components during LateUpdate(based on `ICleanupSystem` in Morpeh). So you'll be able to write `World.RegisterOneFrame<T>()` once and fire components without the need to clean up after you. \
+**How to use that:** Just call extension-method `World.RegisterOneFrame<T>()` in `OnAwake()` of your system to system's World property.
 
-How to work with that:
-* Create ScriptableObject `OneFrameRegister` using `Create/ECS/Helpers/OneFrameRegister`. That's container where you will register one-frame types.
-* Create `OneFrameCleanSystem` using `Create/ECS/Helpers/OneFrameCleanSystem` and assign `OneFrameRegister` to system's public field `register`
-* Add `OneFrameCleanSystem` to your Morpeh `Installer` as `CleanupSystem`
-* Add field `public OneFrameRegister oneFrameRegister;` to the system where you want to register one-frame type and assign `OneFrameRegister` to system's field
-* Call `oneFrameRegister.RegisterOneFrame<T>()` in `OnAwake()` of your system
-* ???
-* Profit!
+<details>
+    <summary>How to migrate from previous SO-based OneFrames</summary>
+
+* Remove OneFrameCleanSystem from your Installer
+* Remove ScriptableObject assets of previously created OneFrameRegistry and OneFrameCleanSystem
+* Replace calls `oneFrameRegister.RegisterOneFrame<T>()` with `World.RegisterOneFrame<T>()`
+</details>
 
 ### Templates for Rider
 This repo also contains Morpeh.Helpers.sln.DotSettings with useful File and Live Templates for Rider.\

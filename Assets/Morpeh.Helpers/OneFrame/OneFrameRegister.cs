@@ -1,20 +1,37 @@
 ﻿namespace Scellecs.Morpeh.Helpers.OneFrame {
     using System;
-    using UnityEngine;
+    using Collections;
 
-    [CreateAssetMenu(menuName = "ECS/Helpers/" + nameof(OneFrameRegister))]
-    public sealed class OneFrameRegister : ScriptableObject {
-        public int startCapacity = 1;
+    internal sealed class OneFrameRegister : IDisposable {
+        private static readonly IntHashMap<OneFrameRegister> REGISTRIES = new IntHashMap<OneFrameRegister>();
 
+        private readonly World world;
         private ICanClean[] oneFrameFilters;
         private int registeredFilters;
 
-        private void OnEnable() {
-            CleanFilters();
+        public static OneFrameRegister GetFor(World world) {
+            if (REGISTRIES.TryGetValue(world.identifier, out OneFrameRegister register)) {
+                return register;
+            }
+
+            register = new OneFrameRegister(world);
+            REGISTRIES.Add(world.identifier, register, out _);
+            return register;
         }
 
-        // ReSharper disable once UnusedMember.Global
-        public void RegisterOneFrame<T>(World world)
+        public static void RegisterOneFrame<TEvent>(World world)
+                where TEvent : struct, IComponent {
+            GetFor(world).RegisterOneFrame<TEvent>();
+        }
+
+        private OneFrameRegister(World world) {
+            this.world = world;
+
+            oneFrameFilters = new ICanClean[1];
+            registeredFilters = 0;
+        }
+
+        private void RegisterOneFrame<T>()
                 where T : struct, IComponent {
             for (var i = 0; i < registeredFilters; i++) {
                 if (oneFrameFilters[i].GetInnerType() == typeof(T)) {
@@ -37,12 +54,7 @@
 
         public void Dispose() {
             CleanOneFrameEvents();
-            CleanFilters();
-        }
-
-        private void CleanFilters() {
-            oneFrameFilters = new ICanClean[startCapacity];
-            registeredFilters = 0;
+            REGISTRIES.Remove(world.identifier, out _);
         }
 
         private sealed class OneFrameFilter<T> : ICanClean

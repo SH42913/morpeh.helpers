@@ -7,12 +7,10 @@ using UnityEngine;
 [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
 [CreateAssetMenu(menuName = "ECS/" + nameof(OneFrameTestSystem))]
 public sealed class OneFrameTestSystem : Scellecs.Morpeh.Systems.UpdateSystem {
-    [SerializeField] private OneFrameRegister oneFrameRegister;
-
     private Filter oneFrameFilter;
 
     public override void OnAwake() {
-        oneFrameRegister.RegisterOneFrame<OneFrameComponent>(World);
+        World.RegisterOneFrame<OneFrameComponent>();
         oneFrameFilter = World.Filter.With<OneFrameComponent>();
     }
 
@@ -23,8 +21,6 @@ public sealed class OneFrameTestSystem : Scellecs.Morpeh.Systems.UpdateSystem {
             Debug.LogError("There's more than one component! Looks like OneFrame was not clean!");
         }
     }
-
-    public static OneFrameTestSystem Create() => CreateInstance<OneFrameTestSystem>();
 
     private struct OneFrameComponent : IComponent { }
 }

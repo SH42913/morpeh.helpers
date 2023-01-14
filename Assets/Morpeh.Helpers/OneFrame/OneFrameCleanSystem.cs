@@ -1,25 +1,19 @@
 ﻿namespace Scellecs.Morpeh.Helpers.OneFrame {
-    using Systems;
-    using UnityEngine;
+    internal sealed class OneFrameCleanSystem : ICleanupSystem {
+        private OneFrameRegister register;
 
-    // ReSharper disable once ClassCanBeSealed.Global
-    [CreateAssetMenu(menuName = "ECS/Helpers/" + nameof(OneFrameCleanSystem))]
-    public class OneFrameCleanSystem : CleanupSystem {
-        public OneFrameRegister register;
+        public World World { get; set; }
 
-        public override void OnAwake() { }
+        public void OnAwake() {
+            register = OneFrameRegister.GetFor(World);
+        }
 
-        public override void OnUpdate(float deltaTime) {
+        public void OnUpdate(float deltaTime) {
             register.CleanOneFrameEvents();
         }
 
-        public override void Dispose() {
+        public void Dispose() {
             register.Dispose();
-        }
-
-        // ReSharper disable once UnusedMember.Global
-        public static OneFrameCleanSystem Create() {
-            return CreateInstance<OneFrameCleanSystem>();
         }
     }
 }

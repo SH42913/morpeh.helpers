@@ -160,9 +160,7 @@ MonoBehaviour:
     system: {fileID: 11400000, guid: 583c24e312ae93745b9a768348b7b4df, type: 2}
   fixedUpdateSystems: []
   lateUpdateSystems: []
-  cleanupSystems:
-  - enabled: 1
-    system: {fileID: 11400000, guid: 59422d3c1576f8b418af71c59530cecc, type: 2}
+  cleanupSystems: []
 --- !u!4 &480750783
 Transform:
   m_ObjectHideFlags: 0
