@@ -1,11 +1,10 @@
 ﻿namespace Scellecs.Morpeh.Helpers {
     using System.Runtime.CompilerServices;
+    using JetBrains.Annotations;
     using Systems;
 
     public abstract class SimpleUpdateSystem : UpdateSystem {
-        // ReSharper disable once NotAccessedField.Global
-        // ReSharper disable once MemberCanBePrivate.Global
-        protected bool inAwake;
+        [PublicAPI] protected bool inAwake;
         private Filter filter;
 
         public override void OnAwake() {

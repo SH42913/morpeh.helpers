@@ -1,11 +1,10 @@
 ﻿namespace Scellecs.Morpeh.Helpers {
     using System.Runtime.CompilerServices;
+    using JetBrains.Annotations;
     using Systems;
 
     public abstract class SimpleFixedUpdateSystem : FixedUpdateSystem {
-        // ReSharper disable once NotAccessedField.Global
-        // ReSharper disable once MemberCanBePrivate.Global
-        protected bool inAwake;
+        [PublicAPI] protected bool inAwake;
         private Filter filter;
 
         public override void OnAwake() {
@@ -98,11 +97,7 @@
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Process(Entity ent, in float deltaTime) {
-            Process(ent,
-                    ref stash1.Get(ent),
-                    ref stash2.Get(ent),
-                    ref stash3.Get(ent),
-                    deltaTime);
+            Process(ent, ref stash1.Get(ent), ref stash2.Get(ent), ref stash3.Get(ent), deltaTime);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
