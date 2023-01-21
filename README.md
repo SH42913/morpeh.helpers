@@ -55,10 +55,20 @@ That util will let you register a type of component to clean up all existing com
 </details>
 
 ### Templates for Rider
-This repo also contains Morpeh.Helpers.sln.DotSettings with useful File and Live Templates for Rider.\
-You can copy-paste `/Default/PatternsAndTemplates/` section to your DotSettings-file.
+If you're using JetBrains Rider, I also can offer [Morpeh Templates](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) for you.\
 
 It contains:
-* Morpeh System file template
+* Morpeh System file template (based on ISystem or ScriptableObject)
 * Morpeh Component file template
 * Morpeh Provider live template with shortcut `provider`
+
+How to import templates to your project:
+* Download [Gist](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) as a file
+* Open your project in Rider
+* Open settings and select desired layer(personal/team-shared/etc) in `Manage Layers` window
+* Use `Import from File...`, select downloaded Gist-file and press `OK` in appeared window
+* Now you've imported templates, but they're not available in `Add new...` yet
+* Open layer with imported templates and open Editor -> File Templates -> C# and/or Unity context
+* Find templates with `Morpeh` in name and switch `Add to "New..." menu` toggle
+* ???
+* Profit!
