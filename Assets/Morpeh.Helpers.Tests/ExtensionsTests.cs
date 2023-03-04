@@ -23,7 +23,7 @@ namespace Morpeh.Helpers.Tests {
         public void FilterRemoveComponentsForAll() {
             const int count = 10;
             for (var i = 0; i < count; i++) {
-                testStash.Add(testWorld.CreateEntity());
+                CreateEntityWithTest();
             }
 
             RefreshFilters();
@@ -33,6 +33,21 @@ namespace Morpeh.Helpers.Tests {
             RefreshFilters();
 
             Assert.AreEqual(0, testFilter.GetLengthSlow());
+        }
+
+        [Test]
+        public void FilterRemoveAllEntities() {
+            Entity first = CreateEntityWithTest();
+            Entity second = CreateEntityWithTest();
+
+            RefreshFilters();
+            Assert.AreEqual(2, testFilter.GetLengthSlow());
+
+            testFilter.RemoveAllEntities();
+            RefreshFilters();
+
+            Assert.True(first.IsDisposed());
+            Assert.True(second.IsDisposed());
         }
 
         [Test]
@@ -47,10 +62,10 @@ namespace Morpeh.Helpers.Tests {
 
         [Test]
         public void StashAddOrGet_Get() {
-            Entity entity = testWorld.CreateEntity();
-            entity.SetComponent(new Test());
+            Entity entity = CreateEntityWithTest();
 
             ref Test test = ref testStash.AddOrGet(entity);
+
             CheckRefIsReal(entity, ref test);
         }
 
@@ -66,11 +81,17 @@ namespace Morpeh.Helpers.Tests {
 
         [Test]
         public void EntityAddOrGet_Get() {
-            Entity entity = testWorld.CreateEntity();
-            entity.SetComponent(new Test());
+            Entity entity = CreateEntityWithTest();
 
             ref Test test = ref entity.AddOrGet<Test>();
+
             CheckRefIsReal(entity, ref test);
+        }
+
+        private Entity CreateEntityWithTest() {
+            Entity entity = testWorld.CreateEntity();
+            testStash.Add(entity);
+            return entity;
         }
 
         private void CheckRefIsReal(Entity entity, ref Test test) {

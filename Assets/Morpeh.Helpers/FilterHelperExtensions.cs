@@ -15,9 +15,9 @@
 
         [PublicAPI]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void RemoveAllEntities(this Filter filter, World world) {
+        public static void RemoveAllEntities(this Filter filter) {
             foreach (Entity ent in filter) {
-                world.RemoveEntity(ent);
+                ent.Dispose();
             }
         }
     }
