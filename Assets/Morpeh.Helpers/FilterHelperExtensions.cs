@@ -7,8 +7,9 @@
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void RemoveComponentForAll<T>(this Filter filter)
                 where T : struct, IComponent {
+            Stash<T> stash = filter.world.GetStash<T>();
             foreach (Entity ent in filter) {
-                ent.RemoveComponent<T>();
+                stash.Remove(ent);
             }
         }
 

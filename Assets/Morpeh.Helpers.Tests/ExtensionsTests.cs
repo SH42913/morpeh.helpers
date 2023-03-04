@@ -9,12 +9,30 @@ namespace Morpeh.Helpers.Tests {
         }
 
         private Stash<Test> testStash;
+        private Filter testFilter;
 
         protected override void InitSystems(SystemsGroup systemsGroup) { }
 
         [SetUp]
         public void Prepare() {
             testStash = testWorld.GetStash<Test>();
+            testFilter = testWorld.Filter.With<Test>();
+        }
+
+        [Test]
+        public void FilterRemoveComponentsForAll() {
+            const int count = 10;
+            for (var i = 0; i < count; i++) {
+                testStash.Add(testWorld.CreateEntity());
+            }
+
+            RefreshFilters();
+            Assert.AreEqual(count, testFilter.GetLengthSlow());
+
+            testFilter.RemoveComponentForAll<Test>();
+            RefreshFilters();
+
+            Assert.AreEqual(0, testFilter.GetLengthSlow());
         }
 
         [Test]
