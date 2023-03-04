@@ -12,7 +12,7 @@
         }
 
         [PublicAPI]
-        [Obsolete("Use " + nameof(EntityExtensions.AddComponent) + " with out bool exist argument")]
+        [Obsolete("Use " + nameof(AddOrGet) + " instead")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ref T GetOrCreate<T>(this Entity entity)
                 where T : struct, IComponent {
@@ -21,6 +21,19 @@
             }
 
             return ref entity.AddComponent<T>();
+        }
+
+        [PublicAPI]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ref T AddOrGet<T>(this Entity entity)
+                where T : struct, IComponent {
+#if MORPEH_DEBUG
+            if (entity.IsNullOrDisposed()) {
+                throw new System.Exception($"[MORPEH] You are trying {nameof(AddOrGet)} on null or disposed entity {entity.entityId.id}");
+            }
+#endif
+
+            return ref entity.world.GetStash<T>().AddOrGet(entity);
         }
     }
 }

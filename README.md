@@ -9,11 +9,13 @@ Open Package Manager and "Add package from git url..." using next string:
 * `https://github.com/SH42913/morpeh.helpers.git?path=/Assets/Morpeh.Helpers`
 
 ## Content
-### Extensions for Entities and Filters
+### Extensions for Entities, Stashes and Filters
 * `filter.RemoveAllEntities()` to remove all entities in filter
 * `filter.RemoveComponentForAll<T>()` to remove component of type T from all entities in filter
 * `entity.Exists()` to make sure entity is not null and not disposed (marked as Obsolete, use `entity.IsNullOrDisposed()` instead)
-* `entity.GetOrCreate<T>()` to get component of type T if it exists or create a new one (marked as Obsolete, use `entity.AddComponent<T>(out bool exist)` instead)
+* `entity.GetOrCreate<T>()` to get component of type T if it exists or create a new one (marked as Obsolete, use `AddOrGet()` below instead)
+* `stash.AddOrGet(entity)` to get existed component or add new one to entity using Stash
+* `entity.AddOrGet()` to get existed component or add new one to Entity
 
 ### Simple update systems
 They're abstract classes based on UpdateSystem, FixedUpdateSystem, or LateUpdateSystem. 
