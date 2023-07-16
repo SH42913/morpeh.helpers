@@ -1,5 +1,6 @@
 # Morpeh Helpers
-Here you'll find some helper utils for [Morpeh ECS framework](https://github.com/scellecs/morpeh).
+Here you'll find some helper utils for [Morpeh ECS framework](https://github.com/scellecs/morpeh).\
+**THIS IS NOT PART OF MORPEH ECS, JUST FEW HELPERS BY ME, USE IT AT YOUR OWN RISK**
 
 ## How to install
 The minimal checked Unity Version is 2020.3.* LTS\
