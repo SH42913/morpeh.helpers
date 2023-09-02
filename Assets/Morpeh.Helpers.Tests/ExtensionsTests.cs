@@ -15,7 +15,7 @@ namespace Morpeh.Helpers.Tests {
         protected override void InitSystems(SystemsGroup systemsGroup) { }
 
         public override void FixtureSetUp() {
-            WorldExtensions.AddWorldPlugin(new OneFramePlugin());
+            OneFramePlugin.Init();
             base.FixtureSetUp();
         }
 
