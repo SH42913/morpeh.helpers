@@ -12,5 +12,7 @@
             systemsGroup.AddSystem(new OneFrameCleanSystem());
             world.AddPluginSystemsGroup(systemsGroup);
         }
+
+        void IWorldPlugin.Deinitialize(World world) { }
     }
 }

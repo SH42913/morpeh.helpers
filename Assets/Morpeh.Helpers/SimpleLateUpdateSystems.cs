@@ -41,7 +41,7 @@
         }
 
         protected override Filter BuildFilter() {
-            return World.Filter.With<T>();
+            return World.Filter.With<T>().Build();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -65,7 +65,7 @@
         }
 
         protected override Filter BuildFilter() {
-            return World.Filter.With<T1>().With<T2>();
+            return World.Filter.With<T1>().With<T2>().Build();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -92,7 +92,7 @@
         }
 
         protected override Filter BuildFilter() {
-            return World.Filter.With<T1>().With<T2>().With<T3>();
+            return World.Filter.With<T1>().With<T2>().With<T3>().Build();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

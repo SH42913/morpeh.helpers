@@ -62,7 +62,7 @@
             private readonly Filter filter;
 
             public OneFrameFilter(World world) {
-                filter = world.Filter.With<T>();
+                filter = world.Filter.With<T>().Build();
             }
 
             public void Clean() {

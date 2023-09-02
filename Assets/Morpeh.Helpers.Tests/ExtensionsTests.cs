@@ -16,7 +16,7 @@ namespace Morpeh.Helpers.Tests {
         [SetUp]
         public void Prepare() {
             testStash = testWorld.GetStash<Test>();
-            testFilter = testWorld.Filter.With<Test>();
+            testFilter = testWorld.Filter.With<Test>().Build();
         }
 
         [Test]
