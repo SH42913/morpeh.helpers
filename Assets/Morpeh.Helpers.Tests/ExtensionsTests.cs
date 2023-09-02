@@ -2,6 +2,7 @@ namespace Morpeh.Helpers.Tests {
     using NUnit.Framework;
     using Scellecs.Morpeh;
     using Scellecs.Morpeh.Helpers;
+    using Scellecs.Morpeh.Helpers.OneFrame;
 
     public class ExtensionsTests : EcsTestFixture {
         private struct Test : IComponent {
@@ -12,6 +13,11 @@ namespace Morpeh.Helpers.Tests {
         private Filter testFilter;
 
         protected override void InitSystems(SystemsGroup systemsGroup) { }
+
+        public override void FixtureSetUp() {
+            WorldExtensions.AddWorldPlugin(new OneFramePlugin());
+            base.FixtureSetUp();
+        }
 
         [SetUp]
         public void Prepare() {
@@ -86,6 +92,17 @@ namespace Morpeh.Helpers.Tests {
             ref Test test = ref entity.AddOrGet<Test>();
 
             CheckRefIsReal(entity, ref test);
+        }
+
+        [Test]
+        public void OneFrame_Clean() {
+            testWorld.RegisterOneFrame<Test>();
+            CreateEntityWithTest();
+
+            testWorld.CleanupUpdate(0f);
+            RefreshFilters();
+
+            Assert.That(testFilter.IsEmpty);
         }
 
         private Entity CreateEntityWithTest() {

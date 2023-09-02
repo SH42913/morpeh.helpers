@@ -2,7 +2,7 @@
     using UnityEngine.Scripting;
 
     [Preserve]
-    internal sealed class OneFramePlugin : IWorldPlugin {
+    public sealed class OneFramePlugin : IWorldPlugin {
         [Preserve]
         public OneFramePlugin() { }
 
