@@ -64,6 +64,7 @@ If you're using JetBrains Rider, I also can offer [Morpeh Templates](https://gis
 It contains:
 * Morpeh System file template (based on ISystem or ScriptableObject)
 * Morpeh Component file template
+* Morpeh Provider file template
 * Morpeh Provider live template with shortcut `provider`
 * Live template with attributes to disable IL2CPP checks with shortcut `il2cpp_nochecks`
 

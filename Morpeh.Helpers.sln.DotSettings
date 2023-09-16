@@ -150,6 +150,9 @@
 	
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=4013A0AF3E778A4893D6E19540AE2F1B/EntryName/@EntryValue">State Machine Behaviour</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=4013A0AF3E778A4893D6E19540AE2F1B/Position/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=49EDAAD42405924DA3A45696AF81AD9E/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=49EDAAD42405924DA3A45696AF81AD9E/EntryName/@EntryValue">Morpeh SO System</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=49EDAAD42405924DA3A45696AF81AD9E/Position/@EntryValue">17</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=7436E0CC049A5D43ABC7609F778E88F2/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=7436E0CC049A5D43ABC7609F778E88F2/EntryName/@EntryValue">Morpeh SO System</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=7436E0CC049A5D43ABC7609F778E88F2/Position/@EntryValue">15</s:Int64>
@@ -204,6 +207,37 @@
 [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2CBD6971A7955044AD2624B84FB49E38/@KeyIndexDefined">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/CustomProperties/=FileName/@EntryIndexedValue">MorpehProvider</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Description/@EntryValue">Morpeh Provider</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=COMPONENT/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=COMPONENT/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=ECS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=ECS/Expression/@EntryValue">getProjectName()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=ECS/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Scope/=3AFF06A83793DB40A4815548166EC77E/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Scope/=3AFF06A83793DB40A4815548166EC77E/Type/@EntryValue">InUnityCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Text/@EntryValue">$HEADER$namespace $NAMESPACE$ {
+	[UnityEngine.AddComponentMenu("$ECS$/" + nameof($COMPONENT$))]
+	public sealed class $CLASS$ : Scellecs.Morpeh.Providers.MonoProvider&lt;$COMPONENT$&gt; {$END$}
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/UITag/@EntryValue">Morpeh</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=567DCF4B487C244A9F6BB46E4E9F3B84/@KeyIndexDefined">False</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
@@ -323,8 +357,11 @@
 	
 	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Reformat/@EntryValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=A32573B30A4F5B408A5C00ECA4ED3B30/@KeyIndexDefined">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=A32573B30A4F5B408A5C00ECA4ED3B30/Type/@EntryValue">InUnityCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=B68999B9D6B43E47A02B22C12A54C3CC/Type/@EntryValue">InCSharpTypeMember</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=D85851B63EB87C41B67E66379E8F3CEB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Scope/=D85851B63EB87C41B67E66379E8F3CEB/Type/@EntryValue">MustBeInUnityCSharpFile</s:String>
 	
 	
 	
