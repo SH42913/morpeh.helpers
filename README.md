@@ -27,10 +27,11 @@ They leave you only one method to implement: `Process(entity, ref c1(, ref c2)(,
 `Process()` also will be called during `OnAwake()` of system, you can use protected field `inAwake` to branch your logic for this case.
 
 Available classes:
-* `SimpleUpdateSystem<T>`/`SimpleUpdateSystem<T1,T2>`/`SimpleUpdateSystem<T1,T2,T3>`
-* `SimpleFixedUpdateSystem<T>`/`SimpleFixedUpdateSystem<T1,T2>`/`SimpleFixedUpdateSystem<T1,T2,T3>`
-* `SimpleLateUpdateSystem<T>`/`SimpleLateUpdateSystem<T1,T2>`/`SimpleLateUpdateSystem<T1,T2,T3>`
-* You also can inherit non-generic abstract SimpleFixed/Late/UpdateSystem to implement your variation of SimpleSystem
+* `SimpleUpdateSystem<T>` based on `UpdateSystem` and `SimpleSystem<T>` based on `ISystem`
+* `SimpleFixedUpdateSystem<T>` based on `FixedUpdateSystem` and `SimpleFixedSystem<T>` based on `IFixedSystem`
+* `SimpleLateUpdateSystem<T>` based on `LateUpdateSystem` and `SimpleLateSystem<T>` based on `ILateSystem`
+* All variants can handle up to 3 generic parameters, eg `SimpleSystem<T1,T2,T3>`
+* You also can inherit non-generic abstract SimpleFixed/Late/UpdateSystem to implement your variation of Simple System
 
 Example:
 ```
