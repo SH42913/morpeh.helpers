@@ -13,7 +13,7 @@
         private SystemsGroup testSystems;
 
         [SetUp]
-        public void FixtureSetUp() {
+        public virtual void FixtureSetUp() {
             testWorld = World.Create();
             testWorld.UpdateByUnity = false;
 

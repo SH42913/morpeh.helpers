@@ -27,10 +27,11 @@ They leave you only one method to implement: `Process(entity, ref c1(, ref c2)(,
 `Process()` also will be called during `OnAwake()` of system, you can use protected field `inAwake` to branch your logic for this case.
 
 Available classes:
-* `SimpleUpdateSystem<T>`/`SimpleUpdateSystem<T1,T2>`/`SimpleUpdateSystem<T1,T2,T3>`
-* `SimpleFixedUpdateSystem<T>`/`SimpleFixedUpdateSystem<T1,T2>`/`SimpleFixedUpdateSystem<T1,T2,T3>`
-* `SimpleLateUpdateSystem<T>`/`SimpleLateUpdateSystem<T1,T2>`/`SimpleLateUpdateSystem<T1,T2,T3>`
-* You also can inherit non-generic abstract SimpleFixed/Late/UpdateSystem to implement your variation of SimpleSystem
+* `SimpleUpdateSystem<T>` based on `UpdateSystem` and `SimpleSystem<T>` based on `ISystem`
+* `SimpleFixedUpdateSystem<T>` based on `FixedUpdateSystem` and `SimpleFixedSystem<T>` based on `IFixedSystem`
+* `SimpleLateUpdateSystem<T>` based on `LateUpdateSystem` and `SimpleLateSystem<T>` based on `ILateSystem`
+* All variants can handle up to 3 generic parameters, eg `SimpleSystem<T1,T2,T3>`
+* You also can inherit non-generic abstract SimpleFixed/Late/UpdateSystem to implement your variation of Simple System
 
 Example:
 ```
@@ -63,7 +64,10 @@ If you're using JetBrains Rider, I also can offer [Morpeh Templates](https://gis
 It contains:
 * Morpeh System file template (based on ISystem or ScriptableObject)
 * Morpeh Component file template
+* Morpeh Provider file template
 * Morpeh Provider live template with shortcut `provider`
+* Live template with attributes to disable IL2CPP checks with shortcut `il2cpp_nochecks`
+* Live templates for iterate Filter using Stash `iterate_filter_stash` or without `iterate_filter`
 
 How to import templates to your project:
 * Download [Gist](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) as a file

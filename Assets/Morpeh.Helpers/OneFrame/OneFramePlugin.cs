@@ -1,10 +1,16 @@
 ﻿namespace Scellecs.Morpeh.Helpers.OneFrame {
+    using UnityEngine;
     using UnityEngine.Scripting;
 
     [Preserve]
-    internal sealed class OneFramePlugin : IWorldPlugin {
+    public sealed class OneFramePlugin : IWorldPlugin {
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+        public static void Init() {
+            WorldExtensions.AddWorldPlugin(new OneFramePlugin());
+        }
+
         [Preserve]
-        public OneFramePlugin() { }
+        internal OneFramePlugin() { }
 
         [Preserve]
         public void Initialize(World world) {
@@ -12,5 +18,7 @@
             systemsGroup.AddSystem(new OneFrameCleanSystem());
             world.AddPluginSystemsGroup(systemsGroup);
         }
+
+        void IWorldPlugin.Deinitialize(World world) { }
     }
 }
