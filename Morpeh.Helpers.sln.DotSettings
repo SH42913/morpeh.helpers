@@ -234,12 +234,9 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/Text/@EntryValue">$HEADER$namespace $NAMESPACE$ {
     using Scellecs.Morpeh;
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
     [UnityEngine.CreateAssetMenu(menuName = "$ECS$/" + nameof($CLASS$))]
     public sealed class $CLASS$ : Scellecs.Morpeh.Systems.$SYSTEMTYPE$ {
-        public override void OnAwake() { $END$ }
+        public override void OnAwake() {$END$}
         public override void OnUpdate(float deltaTime) {}
     }
 }</s:String>
@@ -302,12 +299,9 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=981EE37A8CD75049B0D68682C648E38D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=981EE37A8CD75049B0D68682C648E38D/Text/@EntryValue">$HEADER$namespace $NAMESPACE$ {
     using Scellecs.Morpeh;
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
     public sealed class $CLASS$ : $SYSTEMTYPE$ {
         public World World { get; set; }
-        public void OnAwake() { $END$ }
+        public void OnAwake() {$END$}
         public void OnUpdate(float deltaTime) {}
         public void Dispose() {}
     }
@@ -345,7 +339,7 @@
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Shortcut/@EntryValue">provider</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B574466F3145504FBDBA360EF745983D/Text/@EntryValue">[UnityEngine.AddComponentMenu("$ECS$/" + nameof($COMPONENT$))]
-public sealed class $COMPONENT$Provider : Scellecs.Morpeh.Providers.MonoProvider&lt;$COMPONENT$&gt; {}</s:String>
+public sealed class $COMPONENT$Provider : Scellecs.Morpeh.Providers.MonoProvider&lt;$COMPONENT$&gt; {$END$}</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
@@ -370,9 +364,6 @@ public sealed class $COMPONENT$Provider : Scellecs.Morpeh.Providers.MonoProvider
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
 {
     [System.Serializable]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]
     public struct $CLASS$ : Scellecs.Morpeh.IComponent {$END$}
 }</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C2378FF71349194BB926DC130B7B3747/UITag/@EntryValue">Morpeh</s:String>
