@@ -67,6 +67,7 @@ It contains:
 * Morpeh Provider file template
 * Morpeh Provider live template with shortcut `provider`
 * Live template with attributes to disable IL2CPP checks with shortcut `il2cpp_nochecks`
+* Live templates for iterate Filter using Stash `iterate_filter_stash` or without `iterate_filter`
 
 How to import templates to your project:
 * Download [Gist](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) as a file

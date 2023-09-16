@@ -207,6 +207,30 @@
 [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
 [Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2CBD6971A7955044AD2624B84FB49E38/@KeyIndexDefined">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Applicability/=Surround/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Categories/=Iteration/@EntryIndexedValue">Iteration</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Description/@EntryValue">Iterate Morpeh filter using Stash</s:String>
+	
+	
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=FILTER/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=FILTER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=NAME/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=STASH/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Field/=STASH/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/Type/@EntryValue">InCSharpStatement</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Shortcut/@EntryValue">iterate_filter_stash</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=481DC6021E450D4DB9B94106C2E93737/Text/@EntryValue">foreach (Entity entity in $FILTER$)
+{
+  ref var $NAME$ = ref $STASH$.Get(entity);
+  $END$
+}</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/@KeyIndexDefined">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=49EDAAD42405924DA3A45696AF81AD9E/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
@@ -427,6 +451,28 @@ public sealed class $COMPONENT$Provider : Scellecs.Morpeh.Providers.MonoProvider
 	
 	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C4795E57DDEC1C4F97BBC8C7173EBBCA/@KeyIndexDefined">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Applicability/=Surround/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Categories/=Iteration/@EntryIndexedValue">Iteration</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Description/@EntryValue">Iterate Morpeh filter</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=COMPONENT/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=COMPONENT/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=FILTER/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=FILTER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Field/=NAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Scope/=2C285F182AC98D44B0B4F29D4D2149EC/Type/@EntryValue">InCSharpStatement</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Shortcut/@EntryValue">iterate_filter</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E88C57B7D1F4F64E8B6AC8DB96AE2C10/Text/@EntryValue">foreach (Entity entity in $FILTER$)
+{
+  ref $COMPONENT$ $NAME$ = ref entity.GetComponent&lt;$COMPONENT$&gt;();
+  $END$
+}</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Arcanery/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Morpeh/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Scellecs/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
