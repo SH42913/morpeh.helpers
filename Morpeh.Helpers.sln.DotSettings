@@ -133,6 +133,9 @@
 	
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=0D3F26BF1543F7428813D7AFE13FCDEB/EntryName/@EntryValue">Assembly Definition File</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=0D3F26BF1543F7428813D7AFE13FCDEB/Position/@EntryValue">13</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=105446EB0AFDA64E83433A8592962D27/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=105446EB0AFDA64E83433A8592962D27/EntryName/@EntryValue">provider</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=105446EB0AFDA64E83433A8592962D27/Position/@EntryValue">16</s:Int64>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=13BCCD0B6ED212459750FB930F532E88/EntryName/@EntryValue">Play Mode Test</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=13BCCD0B6ED212459750FB930F532E88/Position/@EntryValue">3</s:Int64>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=7F292FD322E41246839AFE76D9914B34/Entry/=2B54107B610AD84BBA91E5BAD4D39F5B/EntryName/@EntryValue">Image Effect Shader</s:String>
@@ -184,6 +187,22 @@
 	
 	
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=C4795E57DDEC1C4F97BBC8C7173EBBCA/@KeyIndexDefined">False</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Description/@EntryValue">IL2CPP check attributes</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=A32573B30A4F5B408A5C00ECA4ED3B30/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=A32573B30A4F5B408A5C00ECA4ED3B30/Type/@EntryValue">InUnityCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=D85851B63EB87C41B67E66379E8F3CEB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Scope/=D85851B63EB87C41B67E66379E8F3CEB/Type/@EntryValue">MustBeInUnityCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Shortcut/@EntryValue">il2cpp_nochecks</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=105446EB0AFDA64E83433A8592962D27/Text/@EntryValue">[Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
+[Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
+[Unity.IL2CPP.CompilerServices.Il2CppSetOption(Unity.IL2CPP.CompilerServices.Option.DivideByZeroChecks, false)]</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2CBD6971A7955044AD2624B84FB49E38/@KeyIndexDefined">False</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=567DCF4B487C244A9F6BB46E4E9F3B84/@KeyIndexDefined">False</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7436E0CC049A5D43ABC7609F778E88F2/@KeyIndexDefined">True</s:Boolean>

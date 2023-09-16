@@ -65,6 +65,7 @@ It contains:
 * Morpeh System file template (based on ISystem or ScriptableObject)
 * Morpeh Component file template
 * Morpeh Provider live template with shortcut `provider`
+* Live template with attributes to disable IL2CPP checks with shortcut `il2cpp_nochecks`
 
 How to import templates to your project:
 * Download [Gist](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) as a file
