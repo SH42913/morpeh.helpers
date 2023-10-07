@@ -79,3 +79,9 @@ How to import templates to your project:
 * Find templates with `Morpeh` in name and switch `Add to "New..." menu` toggle
 * ???
 * Profit!
+  
+### Templates for Unity
+
+You can install it like ScriptTemplates in Morpeh itself. (In Unity inspector: Packages -> Morpeh Helpers -> Packages -> ScriptTemplates.unitypackage).
+
+It contains templates for each Simple update system with various number of components.
