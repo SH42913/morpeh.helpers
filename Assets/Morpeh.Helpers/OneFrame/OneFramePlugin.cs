@@ -6,7 +6,7 @@
     public sealed class OneFramePlugin : IWorldPlugin {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void Init() {
-            WorldExtensions.AddWorldPlugin(new OneFramePlugin());
+            WorldPluginsExtensions.AddWorldPlugin(new OneFramePlugin());
         }
 
         [Preserve]

@@ -10,20 +10,28 @@
                 where T : struct, IComponent {
             stash.world.ThreadSafetyCheck();
 
-#if MORPEH_DEBUG
-            if (entity.IsNullOrDisposed()) {
-                throw new Exception($"[MORPEH] You are trying Add on null or disposed entity");
-            }
-#endif
-            if (stash.components.Add(entity.entityId.id, default, out int slotIndex)) {
-                entity.AddTransfer(stash.typeId, stash.offset);
-                return ref stash.components.data[slotIndex];
+            if (stash.world.IsDisposed(entity)) {
+                InvalidAddOperationException.ThrowDisposedEntity(entity, stash.Type);
             }
 
+            if (stash.map.TryGetIndex(entity.Id, out var slotIndex)) {
+                return ref stash.data[slotIndex];
+            } else {
+                slotIndex = stash.map.TakeSlot(entity.Id, out var resized);
+
+                if (resized) {
+                    ArrayHelpers.GrowNonInlined(ref stash.data, stash.map.capacity);
 #if MORPEH_DEBUG
-            MLogger.LogError($"You're trying to add on entity {entity.entityId.id} a component that already exists! Use Get or Set instead!");
+                    stash.world.newMetrics.stashResizes++;
 #endif
-            return ref stash.components.GetValueRefByKey(entity.entityId.id);
+                }
+
+                var info = ComponentId<T>.info;
+                stash.data[slotIndex] = default;
+                stash.world.TransientChangeAddComponent(entity.Id, ref info);
+            }
+
+            return ref stash.data[slotIndex];
         }
     }
 }

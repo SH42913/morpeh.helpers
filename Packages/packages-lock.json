@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.scellecs.morpeh": {
-      "version": "https://github.com/scellecs/morpeh.git#main",
+      "version": "https://github.com/scellecs/morpeh.git?path=Scellecs.Morpeh",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "26ab7f5cbc1cc2e632a33617f310f985b48cb015"
+      "hash": "e33105491fe0754d9cccb302dace3d8641681d29"
     },
     "com.unity.ai.navigation": {
       "version": "1.1.6",

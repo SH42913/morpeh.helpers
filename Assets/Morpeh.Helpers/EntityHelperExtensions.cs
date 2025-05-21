@@ -5,35 +5,23 @@
 
     public static class EntityHelperExtensions {
         [PublicAPI]
-        [Obsolete("Use " + nameof(EntityExtensions.IsNullOrDisposed))]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Exists(this Entity entity) {
-            return entity != null && !entity.IsDisposed();
+            return !entity.GetWorld().IsDisposed(entity);
         }
 
         [PublicAPI]
-        [Obsolete("Use " + nameof(AddOrGet) + " instead")]
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ref T GetOrCreate<T>(this Entity entity)
-                where T : struct, IComponent {
-            if (entity.Has<T>()) {
-                return ref entity.GetComponent<T>();
-            }
-
-            return ref entity.AddComponent<T>();
-        }
-
-        [PublicAPI]
+        [Obsolete("[MORPEH] Use Stash.AddOrGet() instead.")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ref T AddOrGet<T>(this Entity entity)
                 where T : struct, IComponent {
 #if MORPEH_DEBUG
             if (entity.IsNullOrDisposed()) {
-                throw new System.Exception($"[MORPEH] You are trying {nameof(AddOrGet)} on null or disposed entity {entity.entityId.id}");
+                InvalidAddOperationException.ThrowDisposedEntity(entity, typeof(T));
             }
 #endif
 
-            return ref entity.world.GetStash<T>().AddOrGet(entity);
+            return ref entity.GetWorld().GetStash<T>().AddOrGet(entity);
         }
     }
 }

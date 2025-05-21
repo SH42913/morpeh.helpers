@@ -52,8 +52,8 @@ namespace Morpeh.Helpers.Tests {
             testFilter.RemoveAllEntities();
             RefreshFilters();
 
-            Assert.True(first.IsDisposed());
-            Assert.True(second.IsDisposed());
+            Assert.False(first.Exists());
+            Assert.False(second.Exists());
         }
 
         [Test]
@@ -71,25 +71,6 @@ namespace Morpeh.Helpers.Tests {
             Entity entity = CreateEntityWithTest();
 
             ref Test test = ref testStash.AddOrGet(entity);
-
-            CheckRefIsReal(entity, ref test);
-        }
-
-        [Test]
-        public void EntityAddOrGet_Add() {
-            Entity entity = testWorld.CreateEntity();
-
-            ref Test test = ref entity.AddOrGet<Test>();
-            Assert.True(testStash.Has(entity));
-
-            CheckRefIsReal(entity, ref test);
-        }
-
-        [Test]
-        public void EntityAddOrGet_Get() {
-            Entity entity = CreateEntityWithTest();
-
-            ref Test test = ref entity.AddOrGet<Test>();
 
             CheckRefIsReal(entity, ref test);
         }
