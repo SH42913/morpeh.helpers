@@ -3,7 +3,7 @@ Here you'll find some helper utils for [Morpeh ECS framework](https://github.com
 **THIS IS NOT PART OF MORPEH ECS, JUST FEW HELPERS BY ME, USE IT AT YOUR OWN RISK**
 
 ## How to install
-The minimal checked Unity Version is 2020.3.* LTS\
+The minimal checked Unity Version is 2022.3.* LTS\
 Also, make sure you've already installed Morpeh, either you'll get compiler errors.
 
 Open Package Manager and "Add package from git url..." using next string:
@@ -59,7 +59,7 @@ That util will let you register a type of component to clean up all existing com
 </details>
 
 ### Templates for Rider
-If you're using JetBrains Rider, I also can offer [Morpeh Templates](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) for you.\
+If you're using JetBrains Rider, I also can offer [Morpeh Templates](https://gist.github.com/SH42913/dd905943872c25468b1aeab40d266a97) for you.
 
 It contains:
 * Morpeh System file template (based on ISystem or ScriptableObject)
